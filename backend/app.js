@@ -9,7 +9,8 @@ const app = express();
 
 mongoose
   .connect(
-    "mongodb+srv://raphael:oUZTMBGN8T9mulGd@cluster0-zjgga.mongodb.net/node-angular?retryWrites=true&w=majority"
+    "mongodb+srv://raphael:oUZTMBGN8T9mulGd@cluster0-zjgga.mongodb.net/node-angular?retryWrites=true&w=majority",
+    { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => {
     console.log("Database connected!");
